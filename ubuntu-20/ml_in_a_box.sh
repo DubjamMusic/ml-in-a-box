@@ -40,7 +40,7 @@
 # pyyaml                5.4.1            (pip)
 # sentence-transformers 2.2.2            (pip)
 # wandb                 0.13.4           (pip)
-# nodejs                16.x latest      (apt)
+# nodejs                20.x latest      (apt)
 # default-jre           latest           (apt)
 # default-jdk           latest           (apt)
 
@@ -254,7 +254,12 @@
 # Node.js and Jupyter Notebook Extensions
 # ------------------------------------------------------------------
 
-    sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash
+    # Node.js
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+    export NODE_MAJOR=20
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+    sudo apt-get update
     sudo $APT_INSTALL nodejs
     $PIP_INSTALL jupyter_contrib_nbextensions jupyterlab-git
     DEBIAN_FRONTEND=noninteractive jupyter contrib nbextension install --user
