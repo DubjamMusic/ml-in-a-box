@@ -140,6 +140,7 @@
     sudo sh cuda_11.7.1_515.65.01_linux.run --silent --toolkit
     export PATH=$PATH:/usr/local/cuda-11.7/bin
     export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64
+    export CUDA_HOME=/usr/local/cuda-11.7
     rm cuda_11.7.1_515.65.01_linux.run
 
     wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
