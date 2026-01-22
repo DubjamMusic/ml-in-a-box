@@ -1,36 +1,46 @@
 # 🛠️ HustleCodex ML Toolkit
 
-## 🛡️ Core Internal Tool Status
-This repository has been elevated from a fork to a **Core Internal Tool** within the HustleCodex ecosystem. It serves as the primary machine learning infrastructure layer, providing optimized environments for AI agent orchestration and data analysis.
+Automated setup scripts that transform bare Ubuntu Paperspace instances into production-ready ML environments with PyTorch, TensorFlow, CUDA, and 40+ data science packages.
 
-## 🚀 Integration Role
-The **HustleCodex ML Toolkit** is specifically tuned for integration with:
-- **HustleCodex Platform**: Provides the backend ML processing power for user data analysis.
-- **AI Agent Taskforce**: Serves as the execution environment for specialized ML agents.
-- **Manus AI Integration**: Acts as the bridge for high-performance computing tasks assigned to Manus agents.
+### Quick Start
 
-## 📦 Features
-- **Optimized Environments**: Pre-configured setups for Ubuntu 22.04 and 20.04.
-- **Modern Stack**: Includes Node.js 20.x for full compatibility with **HustleCodeX v2.0.0** (Next.js 15.5+).
-- **NVIDIA Support**: Tailored driver configurations for H100, A100, and legacy GPU hardware.
+1. Provision a Paperspace Core machine with Ubuntu 20.04 or 22.04
+2. Clone this repository
+3. Run `bash ubuntu-XX/ml_in_a_box.sh` (replace XX with your Ubuntu version)
+4. Wait 15-30 minutes for installation to complete
 
-## 🛠️ Usage in HustleCodex
-This toolkit is invoked during the \`/run ML-Box\` command sequence to:
-1. Initialize a secure, high-performance ML sandbox.
-2. Process HustleCodex datasets using automated machine learning (MLBox).
-3. Return predictive insights (e.g., Revenue Potential) to the orchestration layer.
+### Hardware Compatibility
 
----
+| Ubuntu Version | Recommended Hardware | Driver/CUDA |
+|----------------|---------------------|-------------|
+| 22.04 | H100 (required), A100 (recommended) | Driver 535.x, CUDA 12.1 |
+| 20.04 | A6000, RTX series, older GPUs | Driver 515.x, CUDA 11.7 |
 
-## 🛡️ Decision Record: Documentation Elevation
-- **Decision**: Rebranded repository from \`ml-in-a-box\` fork to \`hustlecodex-ml-toolkit\`.
-- **Reasoning**: To reflect the significant local modifications and its critical role in the HustleCodex financial freedom pathway.
-- **Outcome**: Clearer project identity and improved documentation for developers and AI agents interacting with the toolkit.
+Driver requirements are determined by Nvidia hardware generation support.
 
-## 💡 Strategic Pathway
-\`\`\`markdown
-# Implementation: ML Toolkit Scaling
-1. Integrate real-time GPU monitoring into the HustleCodex dashboard.
-2. Automate the deployment of this toolkit via GitHub Actions for rapid scaling.
-3. Expand the toolkit to include specialized Web3/Blockchain analysis modules.
-\`\`\`
+## What's Included
+
+**Core ML Frameworks**: PyTorch 1.12/2.1, TensorFlow 2.9/2.15, JAX  
+**Hugging Face Stack**: Transformers, Datasets, Accelerate, Diffusers, PEFT  
+**Data Science**: NumPy, Pandas, SciPy, Matplotlib, scikit-learn, XGBoost  
+**NLP**: spaCy, NLTK, sentence-transformers  
+**Development**: JupyterLab, Python 3.9/3.11, Node.js 20.x, Git  
+**GPU Acceleration**: CUDA 11.7/12.1, cuDNN 8.5/8.9, Nvidia drivers
+
+See `ubuntu-XX/README.md` for complete package lists with versions and licenses.
+
+## Repository Structure
+
+```
+ai-toolkit-ml-box/
+├── ubuntu-20/          # Ubuntu 20.04 setup (CUDA 11.7, Python 3.9)
+│   ├── ml_in_a_box.sh  # Installation script
+│   └── README.md       # Detailed package list
+└── ubuntu-22/          # Ubuntu 22.04 setup (CUDA 12.1, Python 3.11)
+    ├── ml_in_a_box.sh  # Installation script
+    └── README.md       # Detailed package list
+```
+
+## GitHub Copilot Integration
+
+See [COPILOT_CAPABILITIES.md](COPILOT_CAPABILITIES.md) for how GitHub Copilot can help maintain this repository.
