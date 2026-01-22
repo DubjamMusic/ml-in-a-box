@@ -1,4 +1,4 @@
-## ML-in-a-box
+# 🛠️ HustleCodex ML Toolkit
 
 Automated setup scripts that transform bare Ubuntu Paperspace instances into production-ready ML environments with PyTorch, TensorFlow, CUDA, and 40+ data science packages.
 
