@@ -305,3 +305,4 @@
     echo "export PATH=${PATH}" >> ~/.bashrc
     echo "export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}" >> ~/.bashrc
     echo "export CUDA_HOME=${CUDA_HOME}" >> ~/.bashrc
+
