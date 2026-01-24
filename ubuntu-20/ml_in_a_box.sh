@@ -274,3 +274,31 @@
     echo "export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}" >> ~/.bashrc
     echo "export CUDA_HOME=${CUDA_HOME}" >> ~/.bashrc
 
+
+# ==================================================================
+# Installation Complete
+# ------------------------------------------------------------------
+
+    echo ""
+    echo "=========================================="
+    echo "  ML Environment Setup Complete!"
+    echo "=========================================="
+    echo ""
+    echo "Installed components:"
+    echo "  • Python 3.9.14"
+    echo "  • PyTorch 1.12.1 with CUDA 11.7"
+    echo "  • TensorFlow 2.9.2"
+    echo "  • JAX 0.3.17"
+    echo "  • Transformers 4.21.3"
+    echo "  • JupyterLab 3.4.6"
+    echo "  • 40+ data science packages"
+    echo ""
+    echo "Next steps:"
+    echo "  1. Restart your shell: source ~/.bashrc"
+    echo "  2. Verify CUDA: nvidia-smi"
+    echo "  3. Test PyTorch: python -c 'import torch; print(torch.cuda.is_available())'"
+    echo "  4. Launch Jupyter: jupyter lab"
+    echo ""
+    echo "=========================================="
+    echo ""
+
